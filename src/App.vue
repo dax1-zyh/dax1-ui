@@ -1,15 +1,11 @@
 <template>
-  <div>hi</div>
-  <dax1/>
+  <router-view/>
 </template>
 
 <script>
-import dax1 from './components/dax1.vue'
 
 export default {
   name: 'App',
-  components: {
-    dax1
-  }
+  components: {}
 }
 </script>
