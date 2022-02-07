@@ -6,11 +6,12 @@
         <li>菜单2</li>
       </ul>
     </div>
+  <hr/>
 </template>
 
 <style lang="scss" scoped>
 .topnav {
-  background: pink;
+  background: lightgray;
   display: flex;
   padding: 16px;
 
