@@ -10,15 +10,12 @@
 </template>
 
 <script lang="ts">
-import {inject, Ref} from "vue";
 
 export default {
-  setup() {
-    const asideVisible = inject<Ref<boolean>>('asideVisible')
-    const toggleAside = () => {
-      asideVisible.value = !asideVisible.value
+  methods: {
+    toggleAside() {
+      this.$store.commit("changeAsideVisible")
     }
-    return {toggleAside}
   }
 }
 

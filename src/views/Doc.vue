@@ -2,7 +2,7 @@
   <div>
     <Topnav/>
     <div class="cotent">
-      <aside v-if="asideVisible">
+      <aside v-if="this.$store.state.asideVisible">
         <h2>组件列表</h2>
         <ol>
           <li>
@@ -26,13 +26,8 @@
 
 <script lang="ts">
 import Topnav from '../components/Topnav.vue'
-import {inject, Ref} from "vue";
 
 export default {
-  setup() {
-    const asideVisible = inject<Ref<boolean>>('asideVisible')
-    return {asideVisible}
-  },
   components: {
     Topnav
   }
