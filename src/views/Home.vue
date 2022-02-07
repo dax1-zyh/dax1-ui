@@ -22,6 +22,9 @@ export default {
 }
 </script>
 <style lang="scss">
+.Topnav {
+  border: 1px solid red;
+}
 
 .banner {
   padding: 100px 0;

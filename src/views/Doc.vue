@@ -2,7 +2,7 @@
   <div>
     <Topnav/>
     <div class="cotent">
-      <aside v-if="this.$store.state.asideVisible">
+      <aside v-if="asideVisible">
         <h2>组件列表</h2>
         <ol>
           <li>
@@ -26,8 +26,13 @@
 
 <script lang="ts">
 import Topnav from '../components/Topnav.vue'
+import {inject} from "vue";
 
 export default {
+  setup(){
+    const asideVisible = inject('asideVisible')
+    return {asideVisible}
+  },
   components: {
     Topnav
   }
@@ -38,11 +43,6 @@ export default {
 aside {
   background: lightblue;
   width: 150px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding: 70px 0 16px 16px;
-
   > h2 {
     margin-bottom: 4px;
   }
@@ -51,6 +51,13 @@ aside {
     > li {
       padding: 4px 0;
     }
+  }
+
+  @media (max-width:500px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 70px 0 16px 16px;
   }
 }
 
