@@ -1,6 +1,6 @@
 import {createStore} from 'vuex'
 
-const store = createStore({
+export const store = createStore({
     state: {
         asideVisible: true,
     },
@@ -11,5 +11,4 @@ const store = createStore({
     }
 })
 
-export default store
 
