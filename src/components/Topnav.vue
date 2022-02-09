@@ -1,6 +1,10 @@
 <template>
   <div class="topnav">
-    <div class="logo">LOGO</div>
+    <div class="logo">
+      <router-link style="color:#f1f8ff" to="/">
+        <img src="../assets/logo.png">
+      </router-link>
+    </div>
     <ul class="menu">
       <li>菜单1</li>
       <li>菜单2</li>
@@ -14,6 +18,7 @@
 
 <script lang="ts">
 import {inject, Ref} from 'vue'
+
 
 export default {
   setup() {
@@ -29,9 +34,9 @@ export default {
 
 <style lang="scss" scoped>
 .topnav {
-  background: lightgray;
+  background: #f1f8ff;
   display: flex;
-  padding: 16px;
+  padding: 10px 10px 8px 10px;
   position: fixed;
   top: 0;
   left: 0;
@@ -59,6 +64,7 @@ export default {
 
     > li {
       margin: 0 1em;
+      color: #888;
     }
   }
 

@@ -2,11 +2,12 @@
   <div>
     <Topnav/>
     <div class="banner">
-      <h1>达喜UI</h1>
-      <h2>达喜的UI框架</h2>
+      <h1 class="title">达喜 UI</h1>
+      <hr>
+      <p class="comment">一套用于学习积累，不断提高自己的组件库</p>
       <p class="actions">
         <a target="_blank" href="https://github.com/dax1-zyh">GitHub</a>
-        <router-link to="/doc">文档</router-link>
+        <router-link to="/doc">开始</router-link>
       </p>
     </div>
   </div>
@@ -22,6 +23,15 @@ export default {
 }
 </script>
 <style lang="scss">
+.title {
+  color: lightskyblue;
+}
+.comment {
+  font-size: 18px;
+  line-height: 28px;
+  color: #888;
+  margin: 10px 0 5px;
+}
 .Topnav {
   border: 1px solid red;
 }
@@ -32,16 +42,16 @@ export default {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: lightskyblue;
+  background: #f1f8ff;
 
   > .actions {
-    padding: 8px 0;
-
+    padding-top: 30px;
     a {
-      margin: 0 8px;
-      background: #fff;
+      margin: 0 10px;
+      background: lightskyblue;
+      color: black;
       display: inline-block;
-      $h: 28px;
+      $h: 35px;
       height: $h;
       line-height: $h;
       border-radius: $h*0.5;
