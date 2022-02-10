@@ -4,7 +4,7 @@
     <div class="banner">
       <h1 class="title">达喜 UI</h1>
       <hr>
-      <p class="comment">一套用于学习积累，不断提高自己的组件库</p>
+      <p class="comment">一套基于Vue3，用于学习积累，不断提高自己的组件库</p>
       <p class="actions">
         <a target="_blank" href="https://github.com/dax1-zyh">GitHub</a>
         <router-link to="/doc">开始</router-link>
@@ -42,7 +42,7 @@ export default {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: #f1f8ff;
+  background: #f4f9fe;
 
   > .actions {
     padding-top: 30px;
