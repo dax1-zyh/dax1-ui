@@ -1,10 +1,6 @@
 <template>
   <div>
-    Button 示例
-  </div>
-  <h1>示例1</h1>
-  <div>
-    <Button @click="onClick">你好</Button>
+    <Button @click="onClick" size="normal">你好</Button>
   </div>
 </template>
 
