@@ -56,5 +56,22 @@ $radius: 4px;
   &::-moz-focus-inner {
     border: 0;
   }
+
+  &.dax1-theme-link{
+    border-color: transparent;
+    box-shadow: none;
+    color: $blue;
+    &:hover,&:focus{
+      color: lighten($blue, 10%);
+    }
+  }
+  &.dax1-theme-text{
+    border-color: transparent;
+    box-shadow: none;
+    color: inherit;
+    &:hover,&:focus{
+      background: darken(white, 5%);;
+    }
+  }
 }
 </style>
