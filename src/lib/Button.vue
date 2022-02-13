@@ -1,19 +1,35 @@
 <template>
   <button
       class="dax1-button"
-      :class="`dax1-theme-${theme}`"
+      :class="classes"
   >
     <slot/>
   </button>
 </template>
 
 <script lang="ts">
+import {computed} from "vue";
+
 export default {
   props: {
     theme: {
       type: String,
       default: 'button' //默认值
+    },
+    size: {
+      type: String,
+      default: 'normal'
     }
+  },
+  setup(props) {
+    const {theme, size} = props;
+    const classes = computed(() => {
+      return {
+        [`dax1-theme-${theme}`]: theme,
+        [`dax1-size-${size}`]: size,
+      }
+    })
+    return {classes}
   }
 }
 </script>
@@ -57,21 +73,36 @@ $radius: 4px;
     border: 0;
   }
 
-  &.dax1-theme-link{
+  &.dax1-theme-link {
     border-color: transparent;
     box-shadow: none;
     color: $blue;
-    &:hover,&:focus{
+
+    &:hover, &:focus {
       color: lighten($blue, 10%);
     }
   }
-  &.dax1-theme-text{
+
+  &.dax1-theme-text {
     border-color: transparent;
     box-shadow: none;
     color: inherit;
-    &:hover,&:focus{
+
+    &:hover, &:focus {
       background: darken(white, 5%);;
     }
+  }
+
+  &.dax1-size-big {
+    font-size: 24px;
+    height: 44px;
+    padding: 0 16px
+  }
+
+  &.dax1-size-small {
+    font-size: 12px;
+    height: 20px;
+    padding: 0 4px;
   }
 }
 </style>
