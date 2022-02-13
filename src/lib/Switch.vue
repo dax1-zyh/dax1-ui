@@ -1,5 +1,5 @@
 <template>
-  <button :class="{checked:value}" @click="toggle">
+  <button class="dax1-switch" :class="{'dax1-checked':value}" @click="toggle">
     <span></span>
   </button>
 </template>
@@ -19,10 +19,10 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 $h: 22px;
 $h2: $h - 4px;
-button {
+.dax1-switch {
   height: $h;
   width: $h*2;
   border: none;
@@ -42,7 +42,7 @@ span {
   transition: left 250ms;
 }
 
-button.checked {
+button.dax1-checked {
   background: blue;
 
   > span {

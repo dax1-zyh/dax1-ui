@@ -1,7 +1,7 @@
 <template>
   <button
       class="dax1-button"
-      :class="`theme-${theme}`"
+      :class="`dax1-theme-${theme}`"
   >
     <slot/>
   </button>
@@ -18,7 +18,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 $h: 32px;
 $border-color: #d9d9d9;
 $color: #333;
