@@ -50,6 +50,7 @@
     <div>
       <Button loading>加载中</Button>
       <Button>加载完毕</Button>
+      <Button>测试 <span>xxx</span></Button>
     </div>
   </div>
 </template>
@@ -68,3 +69,4 @@ export default {
 }
 
 </script>
+
