@@ -2,6 +2,7 @@
   <button
       class="dax1-button"
       :class="classes"
+      :disabled="disabled"
   >
     <slot/>
   </button>
@@ -23,6 +24,10 @@ export default {
     level: {
       type: String,
       default: 'normal'
+    },
+    disabled: {
+      type: Boolean,
+      default: false
     }
   },
   setup(props) {
@@ -46,6 +51,7 @@ $color: #333;
 $blue: #40a9ff;
 $radius: 4px;
 $red: red;
+$grey: grey;
 .dax1-button {
   box-sizing: border-box;
   height: $h;
@@ -156,6 +162,21 @@ $red: red;
       &:focus {
         color: darken($red, 10%);
       }
+    }
+  }
+  &.dax1-theme-button {
+    &[disabled] {
+      cursor: not-allowed;
+      color: $grey;
+      &:hover {
+        border-color: $grey;
+      }
+    }
+  }
+  &.dax1-theme-link, &.dax1-theme-text {
+    &[disabled] {
+      cursor: not-allowed;
+      color: $grey;
     }
   }
 }
