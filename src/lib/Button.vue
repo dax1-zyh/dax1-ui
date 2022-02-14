@@ -1,49 +1,47 @@
 <template>
-  <button
-      class="dax1-button"
-      :class="classes"
-      :disabled="disabled"
-  >
-    <slot/>
+  <button class="dax1-button" :class="classes" :disabled="disabled">
+    <span v-if="loading" class="dax1-loadingIndicator"></span>
+    <slot />
   </button>
 </template>
-
 <script lang="ts">
-import {computed} from "vue";
-
+import { computed } from "vue";
 export default {
   props: {
     theme: {
       type: String,
-      default: 'button' //默认值
+      default: "button",
     },
     size: {
       type: String,
-      default: 'normal'
+      default: "normal",
     },
     level: {
       type: String,
-      default: 'normal'
+      default: "normal",
     },
     disabled: {
+      type: Boolean,
+      default: false,
+    },
+    loading: {
       type: Boolean,
       default: false
     }
   },
   setup(props) {
-    const {theme, size, level} = props;
+    const { theme, size, level } = props;
     const classes = computed(() => {
       return {
         [`dax1-theme-${theme}`]: theme,
         [`dax1-size-${size}`]: size,
         [`dax1-level-${level}`]: level,
-      }
-    })
-    return {classes}
-  }
-}
+      };
+    });
+    return { classes };
+  },
+};
 </script>
-
 <style lang="scss">
 $h: 32px;
 $border-color: #d9d9d9;
@@ -67,51 +65,43 @@ $grey: grey;
   border-radius: $radius;
   box-shadow: 0 1px 0 fade-out(black, 0.95);
   transition: background 250ms;
-
   & + & {
     margin-left: 8px;
   }
-
   &:hover,
   &:focus {
     color: $blue;
     border-color: $blue;
   }
-
   &:focus {
     outline: none;
   }
-
   &::-moz-focus-inner {
     border: 0;
   }
-
   &.dax1-theme-link {
     border-color: transparent;
     box-shadow: none;
     color: $blue;
-
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       color: lighten($blue, 10%);
     }
   }
-
   &.dax1-theme-text {
     border-color: transparent;
     box-shadow: none;
     color: inherit;
-
-    &:hover, &:focus {
-      background: darken(white, 5%);;
+    &:hover,
+    &:focus {
+      background: darken(white, 5%);
     }
   }
-
   &.dax1-size-big {
     font-size: 24px;
-    height: 44px;
-    padding: 0 16px
+    height: 48px;
+    padding: 0 16px;
   }
-
   &.dax1-size-small {
     font-size: 12px;
     height: 20px;
@@ -179,5 +169,20 @@ $grey: grey;
       color: $grey;
     }
   }
+  > .dax1-loadingIndicator{
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    margin-right: 4px;
+    border-radius: 8px;
+    border-color: $blue $blue $blue transparent;
+    border-style: solid;
+    border-width: 2px;
+    animation: dax1-spin 1s infinite linear;
+  }
+}
+@keyframes dax1-spin {
+  0%{transform: rotate(0deg)}
+  100%{transform: rotate(360deg)}
 }
 </style>

@@ -4,7 +4,9 @@
     <list default="true" id="1b36122f-9d7f-400c-b096-25ebf29d1c07" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ButtonDemo.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ButtonDemo.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/lib/Button.vue" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/Button.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/dax1.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/dax1.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +63,7 @@
       <workItem from="1644479553785" duration="4630000" />
       <workItem from="1644497796719" duration="4170000" />
       <workItem from="1644752466579" duration="11344000" />
-      <workItem from="1644840294836" duration="1990000" />
+      <workItem from="1644840294836" duration="6131000" />
     </task>
     <servers />
   </component>
