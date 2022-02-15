@@ -1,40 +1,75 @@
 <template>
   <template v-if="visible">
-    <div class="dax1-dialog-overlay"></div>
+    <div class="dax1-dialog-overlay" @click="onClickOverlay"></div>
     <div class="dax1-dialog-wrapper">
       <div class="dax1-dialog">
-        <header>标题</header>
+        <header>
+          标题
+          <span @click="close" class="dax1-dialog-close"></span>
+        </header>
         <main>
           <p>第一行字</p>
           <p>第二行字</p>
         </main>
         <footer>
-          <Button>OK</Button>
-          <Button>Cancel</Button>
+          <Button @click="ok">OK</Button>
+          <Button @click="cancel">Cancel</Button>
         </footer>
       </div>
     </div>
   </template>
 </template>
+
 <script lang="ts">
-import Button from './Button.vue'
+import Button from "./Button.vue";
 
 export default {
-  components: {
-    Button
-  },
   props: {
     visible: {
       type: Boolean,
       default: false
+    },
+    closeOnclickOverlay: {
+      type: Boolean,
+      default: true
+    },
+    ok: {
+      type: Function
+    },
+    cancel: {
+      type: Function
     }
+  },
+  components: {
+    Button,
+  },
+  setup(props, context) {
+    const close = () => {
+      context.emit('update:visible', false)
+    }
+    const onClickOverlay = () => {
+      if (props.closeOnclickOverlay) {
+        close()
+      }
+    }
+    const ok = () => {
+      if (props.ok && props.ok() !== false) {
+        close()
+      }
+    }
+    const cancel = () => {
+      context.emit('cancel')
+      close()
+    }
+    return {close, onClickOverlay, ok, cancel}
   }
-}
+};
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 $radius: 4px;
 $border-color: #d9d9d9;
+
 .dax1-dialog {
   background: white;
   border-radius: $radius;
@@ -104,6 +139,7 @@ $border-color: #d9d9d9;
     &::after {
       transform: translate(-50%, -50%) rotate(45deg);
     }
+
   }
 }
 </style>
