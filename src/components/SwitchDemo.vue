@@ -1,5 +1,6 @@
 <template>
   <div>
+    <h1>Switch组件</h1><br>
     <Switch v-model:value="checked"/>
   </div>
 </template>
