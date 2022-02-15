@@ -1,18 +1,20 @@
 <template>
-  <div class="dax1-dialog-overlay"></div>
-  <div class="dax1-dialog-wrapper">
-    <div class="dax1-dialog">
-      <header>标题</header>
-      <main>
-        <p>第一行字</p>
-        <p>第二行字</p>
-      </main>
-      <footer>
-        <Button>OK</Button>
-        <Button>Cancel</Button>
-      </footer>
+  <template v-if="visible">
+    <div class="dax1-dialog-overlay"></div>
+    <div class="dax1-dialog-wrapper">
+      <div class="dax1-dialog">
+        <header>标题</header>
+        <main>
+          <p>第一行字</p>
+          <p>第二行字</p>
+        </main>
+        <footer>
+          <Button>OK</Button>
+          <Button>Cancel</Button>
+        </footer>
+      </div>
     </div>
-  </div>
+  </template>
 </template>
 <script lang="ts">
 import Button from './Button.vue'
@@ -20,6 +22,12 @@ import Button from './Button.vue'
 export default {
   components: {
     Button
+  },
+  props: {
+    visible: {
+      type: Boolean,
+      default: false
+    }
   }
 }
 </script>
