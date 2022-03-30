@@ -11,6 +11,13 @@
         :ok="f1"
         :cancel="f2"
     >
+      <template v-slot:tittle>
+        <strong>标题</strong>
+      </template>
+      <template v-slot:content>
+        <div>你好</div>
+        <div>hi</div>
+      </template>
     </Dialog>
   </div>
 </template>
