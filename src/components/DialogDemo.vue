@@ -1,7 +1,6 @@
 <template>
   <div>
     <h1>Dialog组件</h1>
-    <h1>示例1</h1>
     <Button @click="toggle">toggle</Button>
     <!--<Dialog :visible="x" @update:visible="x = $event"></Dialog>-->
     <!--等价于-->
@@ -15,8 +14,8 @@
         <strong>标题</strong>
       </template>
       <template v-slot:content>
-        <div>你好</div>
-        <div>hi</div>
+        <div>第一行</div>
+        <div>第二行</div>
       </template>
     </Dialog>
   </div>
