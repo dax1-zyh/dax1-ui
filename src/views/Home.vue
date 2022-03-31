@@ -4,13 +4,16 @@
     <div class="banner">
       <h1 class="title">达喜 UI</h1>
       <hr>
-      <p class="comment">一套基于Vue3，用于学习积累，不断提高自己的组件库</p>
+      <p class="comment">一套基于Vue3 + TypeScript，面向学习编程的UI组件库</p>
       <p class="actions">
         <a target="_blank" href="https://github.com/dax1-zyh/dax1-ui">GitHub</a>
         <router-link to="/doc">开始</router-link>
       </p>
     </div>
   </div>
+  <img src="../assets/vue3.png" >
+  <img src="../assets/TypeScript.png" >
+  <img src="../assets/learning.png" >
 </template>
 
 <script lang="ts">
@@ -43,6 +46,8 @@ export default {
   align-items: center;
   flex-direction: column;
   background: #f4f9fe;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
 
   > .actions {
     padding-top: 30px;
