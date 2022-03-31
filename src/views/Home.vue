@@ -7,13 +7,30 @@
       <p class="comment">一套基于Vue3 + TypeScript，面向学习编程的UI组件库</p>
       <p class="actions">
         <a target="_blank" href="https://github.com/dax1-zyh/dax1-ui">GitHub</a>
-        <router-link to="/doc">开始</router-link>
+        <router-link to="/doc/start">开始</router-link>
       </p>
     </div>
   </div>
-  <img src="../assets/vue3.png" >
-  <img src="../assets/TypeScript.png" >
-  <img src="../assets/learning.png" >
+  <div class="iconList">
+    <div class="iconItem">
+      <img class="icon" src="../assets/vue3.png">
+      <div class="text">
+        <h2>基于Vue3</h2>
+      </div>
+    </div>
+    <div class="iconItem">
+      <img class="icon" src="../assets/TypeScript.png">
+      <div class="text">
+        <h2>基于TypeScript</h2>
+      </div>
+    </div>
+    <div class="iconItem">
+      <img class="icon" src="../assets/learning.png">
+      <div class="text">
+        <h2>面向学习编程</h2>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script lang="ts">
@@ -64,4 +81,26 @@ export default {
     }
   }
 }
+
+.iconList {
+  display: flex;
+  flex-direction: column;
+
+  .iconItem {
+    display: flex;
+    margin-left: calc(50% - 100px);
+
+    .icon {
+      width: 80px;
+      height: 80px;
+    }
+
+    .text {
+      margin-left: 20px;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
 </style>
