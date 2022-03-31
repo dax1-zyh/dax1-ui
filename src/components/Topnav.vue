@@ -13,7 +13,7 @@
         <router-link to="/doc/switch">组件</router-link>
       </li>
     </ul>
-    <span class="toggleAside" @click="toggleAside">
+    <span v-if="toggleMenuButtonVisible" class="toggleAside" @click="toggleAside">
       <img src="../assets/asideIcon.png" alt="">
     </span>
   </div>
@@ -25,6 +25,12 @@ import {inject, Ref} from 'vue'
 
 
 export default {
+  props: {
+    toggleMenuButtonVisible: {
+      type: Boolean,
+      default: false
+    }
+  },
   setup() {
     const asideVisible = inject<Ref<boolean>>('asideVisible')
     const toggleAside = () => {
