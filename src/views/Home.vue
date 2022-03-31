@@ -6,7 +6,7 @@
       <hr>
       <p class="comment">一套基于Vue3，用于学习积累，不断提高自己的组件库</p>
       <p class="actions">
-        <a target="_blank" href="https://github.com/dax1-zyh">GitHub</a>
+        <a target="_blank" href="https://github.com/dax1-zyh/dax1-ui">GitHub</a>
         <router-link to="/doc">开始</router-link>
       </p>
     </div>
