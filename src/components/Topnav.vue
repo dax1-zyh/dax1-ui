@@ -9,6 +9,9 @@
       <li>
         <router-link to="/doc/intro">文档</router-link>
       </li>
+      <li>
+        <router-link to="/doc/switch">组件</router-link>
+      </li>
     </ul>
     <span class="toggleAside" @click="toggleAside">
       <img src="../assets/asideIcon.png" alt="">
